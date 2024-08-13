@@ -1,0 +1,618 @@
+@import './variable';
+
+//**Page About Us**//
+
+.page-about-banner {
+    img {
+        text-align: center;
+    }
+
+    .page-about-banner-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+
+        h1 {
+            margin: 80px 0 13px 0;
+            font-size: 44px;
+            font-weight: 400;
+            letter-spacing: 0.88px;
+        }
+        p {
+            font-size: 24px;
+            letter-spacing: 0.48px;
+        }
+    }
+}
+
+.page-about {
+    .about-us {
+        margin: 23px 0 43px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            aspect-ratio: 100/45;
+            background-size: contain;
+            background: url('../assets/image/icons/about-us-icon-left.svg') no-repeat;
+            top: 49px;
+            left: 90px;
+        }
+
+        .container-about-us {
+            background: none;
+        }
+
+        .about-us-content {
+            .about-us-des {
+                text-align: justify;
+                max-width: 491px;
+                margin: 30px 0 0;
+            }
+        }
+
+        .about-us-wrap {
+            &:before {
+                content: none;
+            }
+        }
+    }
+    
+}
+
+.milestone {
+    margin-bottom: 100px;
+    background: url('../assets/image/milestones-back.png') no-repeat;
+    padding: 80px 0 55px;
+    background-size: cover;
+
+    .milestone-head {
+        h3 {
+            margin-bottom: 80px;
+            letter-spacing: 0.96px;
+        }
+    }
+
+    .milestone-year {
+        display: flex;
+        justify-content: space-between;
+        height: 230px;
+        align-items: center;
+        margin-bottom: 70px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            min-width: 530px;
+            transform: translateY(-1px);
+            top: 50%;
+            background: #A1A1A1;
+            left: 0;
+        }
+
+        .milestone-year-item {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: url('../assets/image/icons/milestone-icon-back.svg') no-repeat;
+            background-size: cover;
+            border: none;
+            color: #fff;
+            transition: all 0.5s ease;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                opacity: 0;
+                background: url('../assets/image/icons/milestone-icon-back-active-before.svg') no-repeat;
+                background-size: cover;
+                transition: all 0.5s ease;
+                bottom: 0;
+                transform: translateX(-50%);
+                left: 50%;
+            }
+
+            span {
+                font-size: 24px;
+                line-height: 50px;
+                transition: all 0.3s ease;
+            }
+
+            &.active {
+                background: url('../assets/image/icons/milestone-icon-back-active.svg') no-repeat center center;
+                height: 230px;
+                width: 230px;
+                &:before {
+                    width: 277px;
+                    height: 83px;
+                    opacity: 1;
+                }
+
+                span {
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    
+    .milestone-content {
+        margin: 0 90px;
+        position: relative;
+
+        .swiper-button-prev {
+            left: -25px;
+            transform: translateX(-100%);
+            height: 35px;
+            width: 35px;
+        }
+        .swiper-button-next {
+            right: -25px;
+            transform: translateX(100%);
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+    .milestone-content-item {
+        .milestone-content-date {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px; 
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 24px; 
+        }
+    }
+
+}
+
+.mission {
+    margin-bottom: 44px;
+    
+    .mission-content {
+        h3 {
+            margin-bottom: 100px;
+        }
+    }
+
+    .mission-main {
+        display: flex;
+        gap: 100px;
+        justify-content: space-between;
+    }
+
+    .mission-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-self: flex-start;
+
+        h4 {
+            display: inline-block;
+            position: relative;
+            font-family: $font-Playfair;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 50px;
+            margin-bottom: 30px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: 100%;
+                height: 1px;
+                background: #000;
+            }
+        }
+
+        .mission-des {
+            font-size: 18px;
+            line-height: 180%;
+            margin-bottom: 30px;
+            max-width: 499px;
+        }
+
+        .mission-list-text {
+            li {
+                background: url('../assets/image/icons/page-about-check.svg') left center no-repeat;
+                padding-left: 37px;
+                margin-bottom: 34px;
+                color: #727272;
+                font-size: 18px;
+                line-height: 180%;
+            }
+        }
+
+        .mission-item-image {
+            position: relative;
+            margin-bottom: 120px;
+            flex: 0 0 100%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 261px;
+                height: 90px;
+                background: url('../assets/image/icons/page-about-cloud.svg') no-repeat;
+                background-size: contain;
+                bottom: 0;
+                z-index: 3;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: $primary;
+                top: 20px;
+            }
+            img {
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        &:first-child {
+            .mission-list-text {
+                margin-bottom: 90px;
+            }
+            .mission-item-image {
+                &:before {
+                    left: 0;
+                    transform: translate(-50%, 50%);
+                }
+                &:after {
+                    left: -20px;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .mission-item-image {
+                &:before {
+                    right: 0;
+                    transform: translate(50%, 50%);
+                }
+                &:after {
+                    right: -20px;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            flex-wrap: wrap-reverse;
+        }
+    }
+}
+
+.network {
+    padding: 100px 0;
+    background: #F7EFE4;
+    position: relative;
+    margin-bottom: 100px;
+
+    h3 {
+        margin-bottom: 45px;
+        text-align: center;
+        line-height: 54px;
+        letter-spacing: 0.96px;
+        text-transform: capitalize;
+    }
+
+    img {
+        text-align: center;
+    }
+}
+
+.leader-team {
+    margin-bottom: 110px;
+
+    .leader-team-content {
+        margin-bottom: 86px;
+
+        h3 {
+            line-height: 64px;
+            letter-spacing: 0.96px;
+            margin-bottom: 16px;
+        }
+        p {
+            color: #727272;
+            font-size: 18px;
+            line-height: 180%; 
+            max-width: 783px;
+            margin: 0 auto;
+        }
+    }
+
+    .leader-team-item {
+        text-align: center;
+
+        img {
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+        span {
+            color: #5F5C60;
+            font-size: 16px;
+            line-height: 28px;
+            text-transform: capitalize;
+        }
+    }
+
+    .swiper-button-next {
+        right: 0;
+        transform: translate(18px, -50%);
+    }
+
+    .swiper-button-prev {
+        left: 0;
+        transform: translate(-18px, -50%);
+    }
+}
+
+.space-restaurant {
+    margin-bottom: 100px;
+
+    .space-restaurant-content {
+        h3 {
+            letter-spacing: 0.96px;
+            margin-bottom: 16px;
+        }
+        p {
+            color: #727272;
+            font-size: 18px;
+            line-height: 180%; 
+            max-width: 782px;
+            margin: 0 auto 85px;
+        }
+    }
+
+    .space-restaurant-main {
+        position: relative;
+
+        .swiper-slide {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .swiper-button-prev {
+        left: calc(100%/3);
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .swiper-button-next {
+        right: calc(100%/3);
+        transform: translate(50%, -50%);
+        z-index: 2;
+    }
+}
+
+
+//**Responsive Page About**//
+
+@include large-desktop {
+    .mission .mission-item {
+        &:first-child {
+            .mission-item-image:before {
+                transform: translate(-50px, 50%);
+            }
+        }
+        &:nth-child(2) {
+            .mission-item-image:before {
+                transform: translate(50px, 50%);
+            }
+        }
+    }
+}
+
+@include tablet {
+    .page-about {
+        .about-us {
+            &:before {
+                left: 15px;
+                top: 20px;
+            }
+        }
+    }
+
+    .milestone {
+        .milestone-year {
+            height: 180px;
+
+            .milestone-year-item {
+                width: 100px;
+                height: 100px;
+                flex: 0 0 100px;
+
+                &.active {
+                    width: 160px;
+                    height: 160px;
+                    flex: 0 0 160px;
+                    &:before {
+                        width: 190px;
+                        height: 57px;
+                    }
+                }
+            }
+        }
+
+        .milestone-content {
+            margin: 0 60px;
+        }
+    }
+
+    .mission {
+        .mission-main {
+            gap: 50px;
+        }
+    }
+}
+
+@include landscape-phone {
+    .milestone {
+        .milestone-year {
+            justify-content: flex-start;
+            overflow-x: scroll;
+            gap: 50px;
+        }
+    }
+
+    .space-restaurant {
+        .swiper-circle {
+            display: none;
+        }
+    }  
+
+    .mission {
+        overflow: hidden;
+
+        .mission-main {
+            flex-wrap: wrap;
+        }
+
+        .mission-item {
+            &:nth-child(2) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .mission-item-image {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    .leader-team {
+        .swiper-circle {
+            display: none;
+        }
+    }
+}
+
+@include mobile {
+    .page-about-banner {
+        .page-about-banner-content {
+            h1 {
+                margin: 40px 0 13px 0;
+                font-size: 32px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .mission {
+        .mission-content {
+            h3 {
+                margin-bottom: 40px;
+            }
+        }
+        .mission-item {
+            h4 {
+                font-size: 24px;
+            }
+            .mission-des {
+                font-size: 14px;
+            }
+            .mission-list-text {
+                margin-bottom: 60px;
+
+                li {
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &:first-child {
+                .mission-item-image {
+                    &:before {
+                        transform: translate(0px, 50%);
+                    }
+                }
+                .mission-list-text {
+                    margin-bottom: 60px;
+                }
+            }
+            
+            &:nth-child(2) {
+                .mission-item-image {
+                    &:before {
+                        transform: translate(0px, 50%);
+                    }
+                }
+            }
+        }
+    }
+
+    .leader-team {
+        .leader-team-content {
+            margin-bottom: 40px;
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .leader-team-item {
+            p {
+                font-size: 16px;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .space-restaurant {
+        .space-restaurant-content {
+            p {
+                font-size: 14px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .partner {
+        .partner-content {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@include small-mobile {
+    .page-about-banner {
+        .page-about-banner-content {
+            h1 {
+                margin: 20px 0 13px 0;
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+        }
+    }
+
+}

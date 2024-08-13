@@ -1,0 +1,75 @@
+@import './variable';
+
+//***CSS 404 page***//
+
+.page-404 {
+    position: relative;
+    padding: 118px 0 162px;
+    text-align: center;
+    background: url('../assets/image/404-back.png') no-repeat;
+    background-size: cover;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: 23%;
+        bottom: 115px;
+        width: 210px;
+        height: 73px;
+        background: url('../assets/image/icons/page-about-cloud.svg') no-repeat;
+        background-size: contain;
+    }
+    
+    .page-404-image {
+        margin-bottom: 37px;
+    }
+
+    h1 {
+        font-family: $font-OpenSans;
+        font-size: 52px;
+        font-weight: 700;
+        max-width: 712px;
+        margin: 0 auto 40px;
+    }
+
+    .page-404-button {
+        border-radius: 5px;
+        padding: 15px 118px;
+        background: $primary;
+        color: #fff;
+        border: 1px solid $primary;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+
+        &:hover {
+            background: #fff;
+            color: $primary;
+        }
+    }
+}
+
+@include landscape-phone {
+    .page-404 {
+        padding: 118px 16px 162px;
+
+        &:before {
+            right: 50%;
+            bottom: 70px;
+            transform: translateX(50%);
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+}
+
+@include mobile {
+    .page-404 {
+        .page-404-button {
+            padding: 15px;
+            width: 100%;
+        }
+    }
+}
